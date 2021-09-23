@@ -4,14 +4,14 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 2px;
+  padding: 0px;
   margin-top: 30px;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 } /* for: mobile, tablet */
 @media only screen and (min-width: 768px) {
   #main {
-    border-color: green;
+    border-color: brown;
     width: 780px;
     max-width: 790px;
     padding: 5px 40px 5px 40px;
@@ -19,55 +19,58 @@
 } /* for: wide */
 #header {
   display: flex;
+  flex-flow: column nowrap;
   padding: 0px;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   color: darkgreen;
   text-align: center;
 } /* for: mobile,tablet */
 @media only screen and (min-width: 768px) {
   #header {
-    padding: 10px;
-    overflow: auto;
-    white-space: nowrap;
-    /*flex-wrap: wrap;*/
-    justify-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0px;
+    justify-content: center;
+    text-align: center;
   }
 } /* for: wide */
 #header-img {
-  width: 20%;
+  width: 80%;
   height: auto;
+  justify-content: center;
   font-size: 0.4em;
 }
 #nav-bar {
-  background-color: lightblue;
+  background-color: orange;
   display: flex;
   width: 100%;
   wrap: nowrap;
   font-size: 0.8em;
-  text-align: right;
   display: inline-block;
-  color: white;
   text-align: center;
-  padding: 14px;
+  padding: 0px;
   text-decoration: none;
+  overflow: auto; /* for scroll */
+  white-space: nowrap; /* for scroll */
   position: fixed; /* nav menu fixed at top of screen */
   top: 0; /* nav menu fixed at top of screen */
 }
-/*@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   #nav-bar {
-    wrap: wrap;
+    flex-flow: row, wrap;
+    justify-content: space-around;
+    font-size: 1.1em;
   }
-}*/
-.hdr1 {
-  grid-area: header;
 }
-.hdr2 {
-  grid-area: menu;
+.hdrtxt {
+  width: 80%;
+}
+.hdrpic {
+  width: 20%;
 }
 .nav-link {
-  grid-area: right;
-  padding: 1px 15px 1px 15px;
+  padding: 1px 8px 1px 8px;
 }
 #coffee {
   display: flex;
@@ -98,14 +101,14 @@
   #form {
     border-radius: 15px;
     padding: 25px 100px 25px 100px;
-    line-height: 200%;
+    line-height: 250%;
   }
 } /* for: wide */
 #submit {
   border: 1px solid orange;
   border-radius: 5px;
   background-color: burlywood;
-  font-size: 1.6em;
+  /*font-size: 1.3em;*/
   font-weight: bold;
   width: 100px;
 }
@@ -116,24 +119,31 @@
   font-size: 1.2em;
   width: 400px;
 }
+.aboutpic {
+  width: 50%;
+  height: auto;
+  font-size: 0.4em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #video {
-    margin: 0px;
-    width: 100%;
-    height: auto;
+  margin: 0px;
+  width: 100%;
+  height: auto;
 }
 @media only screen and (min-width: 768px) {
   #video {
-  width: 550px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
+    width: 550px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 #video2 {
   margin: 0px;
   width: 100%;
   height: auto;
-  }
 }
 @media only screen and (min-width: 768px) {
   #video2 {
@@ -141,13 +151,14 @@
     height: 240px; /* 480 */
     margin-left: auto;
     margin-right: auto;
-}}
+  }
+}
 
 .clear-div {
   margin: auto;
   text-align: center;
   clear: both;
-  border: 8px solid green;
+  border: 3px solid green;
 }
 p {
   font-size: 1.1em;
