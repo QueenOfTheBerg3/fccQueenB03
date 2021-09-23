@@ -1,6 +1,6 @@
 #main {
-  background: lightyellow;
-  border: 3px solid orange;
+  background: #ccffee;
+  border: 3px solid blue;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -11,7 +11,7 @@
 } /* for: mobile, tablet */
 @media only screen and (min-width: 768px) {
   #main {
-    border-color: brown;
+    border-color: lightseagreen;
     width: 780px;
     max-width: 790px;
     padding: 5px 40px 5px 40px;
